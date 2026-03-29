@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
@@ -28,16 +29,16 @@ public class SanBong {
   private String loaiSan;
 
   @Column(name = "gia")
-  private double gia;
+  private BigDecimal gia;
 
   @Column(name = "mo_ta")
   private String moTa;
 
   @Column(name = "trang_thai")
-  private String trangThai;
+  private Boolean trangThai;
 
   @Column(name = "deleted")
-  private String deleted;
+  private Boolean deleted;
 
   @Column(name = "create_at")
   private LocalDateTime createdAt;

@@ -1,36 +1,35 @@
 package com.example.demo.response;
 
-import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 
 public class SanBongResponse {
 
-    @Column(name = "ten")
+
     private String ten;
 
-    @Column(name = "dia_chi")
+
     private String diaChi;
 
-    @Column(name = "loai_san")
+
     private String loaiSan;
 
-    @Column(name = "gia")
-    private double gia;
 
-    @Column(name = "mo_ta")
+    private BigDecimal gia;
+
+
     private String moTa;
 
-    @Column(name = "trang_thai")
-    private String trangThai;
+
+    private Boolean trangThai;
 
 
-    private String deleted;
-
-
-    private LocalDateTime createdAt;
-
-
-    private java.sql.Timestamp updatedAt;
 
 }
