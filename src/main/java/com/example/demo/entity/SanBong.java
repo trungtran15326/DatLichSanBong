@@ -1,107 +1,49 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Entity
+@Table(name = "SanBong")
 public class SanBong {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
+
+  @Column(name = "ten")
   private String ten;
+
+  @Column(name = "dia_chi")
   private String diaChi;
+
+  @Column(name = "loai_san")
   private String loaiSan;
+
+  @Column(name = "gia")
   private double gia;
+
+  @Column(name = "mo_ta")
   private String moTa;
+
+  @Column(name = "trang_thai")
   private String trangThai;
+
+  @Column(name = "deleted")
   private String deleted;
-  private java.sql.Timestamp createdAt;
+
+  @Column(name = "create_at")
+  private LocalDateTime createdAt;
+
+  @Column(name = "update_at")
   private java.sql.Timestamp updatedAt;
 
-
-  public long getId() {
-    return id;
-  }
-
-  public void setId(long id) {
-    this.id = id;
-  }
-
-
-  public String getTen() {
-    return ten;
-  }
-
-  public void setTen(String ten) {
-    this.ten = ten;
-  }
-
-
-  public String getDiaChi() {
-    return diaChi;
-  }
-
-  public void setDiaChi(String diaChi) {
-    this.diaChi = diaChi;
-  }
-
-
-  public String getLoaiSan() {
-    return loaiSan;
-  }
-
-  public void setLoaiSan(String loaiSan) {
-    this.loaiSan = loaiSan;
-  }
-
-
-  public double getGia() {
-    return gia;
-  }
-
-  public void setGia(double gia) {
-    this.gia = gia;
-  }
-
-
-  public String getMoTa() {
-    return moTa;
-  }
-
-  public void setMoTa(String moTa) {
-    this.moTa = moTa;
-  }
-
-
-  public String getTrangThai() {
-    return trangThai;
-  }
-
-  public void setTrangThai(String trangThai) {
-    this.trangThai = trangThai;
-  }
-
-
-  public String getDeleted() {
-    return deleted;
-  }
-
-  public void setDeleted(String deleted) {
-    this.deleted = deleted;
-  }
-
-
-  public java.sql.Timestamp getCreatedAt() {
-    return createdAt;
-  }
-
-  public void setCreatedAt(java.sql.Timestamp createdAt) {
-    this.createdAt = createdAt;
-  }
-
-
-  public java.sql.Timestamp getUpdatedAt() {
-    return updatedAt;
-  }
-
-  public void setUpdatedAt(java.sql.Timestamp updatedAt) {
-    this.updatedAt = updatedAt;
-  }
 
 }
